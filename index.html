@@ -177,12 +177,13 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             z-index: 10;
+            box-sizing: border-box;
         }
 
         .counter-badge {
-            margin-top: 15px;
+            margin: 15px 0 10px 0;
             padding: 8px 16px;
             background-color: #F2F4F7;
             border: 1px solid #D0D5DD;
@@ -190,6 +191,15 @@
             font-weight: bold;
             color: var(--vtsu-green);
             font-size: 36px;
+        }
+
+        /* Warning text style perfectly paired under the badge */
+        .submit-warning-text {
+            color: #C0392B; 
+            font-weight: bold;
+            font-size: 14px;
+            max-width: 500px;
+            line-height: 1.4;
         }
 
         /* Legal Disclaimer Box Styling */
@@ -210,17 +220,22 @@
 
 <div class="main-form-card">
     
+    <!-- Optimized Success State Screen overlay -->
     <div class="success-overlay" id="successView">
-        <h3 style="color: var(--vtsu-green); font-size: 28px; margin-bottom: 5px;">Submission Saved!</h3>
-        <p style="color: #666; margin-top: 0;">If you win, we will email you and ship the printer to your provided address.</p>
+        <h3 style="color: var(--vtsu-green); font-size: 28px; margin: 0;">Submission Saved!</h3>
+        
         <div class="counter-badge" id="countDisplay">Securing ticket #...</div>
+        
+        <div class="submit-warning-text">
+            ⚠️ Warning: If fraudulent multiple entries are found, you will be disqualified from the giveaway.
+        </div>
     </div>
 
     <div class="header-logo-container">
         <img class="header-logo" src="logo.png" alt="Vermont State University Logo">
     </div>
     
-    <!-- Bold Notice under the Logo -->
+    <!-- Drawing Notice -->
     <div class="drawing-notice">
         Drawing will be held Thursday, 6/4/26 at 3:00 PM using numbergenerator.org<br>
         with the range defined by the total number of entries received.
@@ -271,7 +286,7 @@
     </div>
 </div>
 
-<!-- Cleaned up Legal Disclaimer at the very bottom -->
+<!-- Legal Disclaimer at the very bottom -->
 <div class="legal-disclaimer">
     <strong>Disclaimer:</strong> This drawing is a free promotional giveaway conducted for educational and institutional engagement purposes. Entry is completely voluntary, and no purchase or financial payment of any kind is required to participate. This event does not constitute gambling, a lottery, or a game of chance for commercial gain. Void where prohibited by law.
 </div>
